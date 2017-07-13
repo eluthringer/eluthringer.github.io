@@ -45,7 +45,7 @@ var arc = d3.svg.arc()
     .innerRadius(function(d) { return Math.max(0, y(d.y)); })
     .outerRadius(function(d) { return Math.max(0, y(d.y + d.dy)); });
 
-d3.json("https://github.com/eluthringer/eluthringer.github.io/blob/master/flare.json", function(error, root) {
+d3.json("eluthringer.datausa.io.flare.json", function(error, root) {
   var g = svg.selectAll("g")
       .data(partition.nodes(root))
     .enter().append("g");
